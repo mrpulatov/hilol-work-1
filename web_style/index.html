@@ -1,0 +1,162 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>tanzil</title>
+	<link href="https://fonts.googleapis.com/css?family=Cormorant:600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://kit.fontawesome.com/cab2a65650.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="body">
+	<div class="pre-navbar">
+		<div class="logo-case">
+			<img src="logo.png" alt="logo">
+		</div>
+		<div class="logo-text">
+			<p class="text">ҚУРЪОНИ КАРИМДА КЕЛГАН СЎЗЛАР</p>
+		</div>
+	</div>
+	<div class="searchbar">
+		<div class="search_row">
+			<div class="search_block">
+				<input type="text" class="search_text" placeholder="Search">
+					<div class="search_btn" type="submit">
+						<i class="fas fa-search"></i>
+					</div>
+			</div>
+	    </div>
+	</div>
+	<div class="letters-box">
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>A</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>Б</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>В</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>Г</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>Д</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>Е</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>Ё</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>Ж</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>З</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>И</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>Й</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>К</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>Л</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>М</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>Н</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>О</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>П</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>Р</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>С</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>Т</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>У</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>Ф</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>Х</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>Ш</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>Ъ</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>Қ</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>Ғ</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>Ҳ</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>Э</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>Ю</a></p>
+		</div>
+		<div class="letter">
+			<p class="letter-text"><a onclick="openorclosebox('box')" return false>Я</a></p>
+		</div>
+	</div>
+
+
+
+
+
+<div class="block-words" id="box">
+	
+	<a  onclick="openorclosebox('box')" return false class="close-btn">Close</a>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="dark" id="dark-box">
+	
+</div>
+
+</div>
+<script>
+	function openorclosebox(box){
+		display = document.getElementById('box').style.display
+		if (display == "none"){
+			document.getElementById('box').style.display = "block";
+			document.getElementById('dark-box').style.display = "block";
+		}
+		else{
+			document.getElementById('box').style.display = "none";
+			document.getElementById('dark-box').style.display = "none";
+		}
+	}
+</script>
+</body>
+</html>
