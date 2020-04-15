@@ -40,8 +40,8 @@ body{
 
 .logo-case img{
 	margin:10px;
-	height: 25vw;
-	width: 25vw;
+	height: 20vw;
+	width: 20vw;
 }
 
 .text{
@@ -101,13 +101,15 @@ body{
 .letters-box{
 	margin-right: 10vw;
 	margin-left: 10vw;
-	margin-top: 5vw;
+	margin-top: 2vw;
+	display: flex;
+	justify-content: center;
 }
 
 .letter{
 	float: left;
 	justify-content: center;
-	align-items: center;C
+	align-items: center;
 	height: 2vw;
 	width: 2vw;
 	background-color: #F6F6FF;
@@ -126,29 +128,11 @@ body{
     color: #424242;
 }
 
-.block-a{
-	position: absolute;
-	display: none;
-	top:0;
-	left: 0;
-	z-index: 9999;
-	margin-right: 5vw;
-	margin-left: 5vw;
-	margin-top: 5vw;
-	background-color: #F6F6FF;
-	border-radius: 20px;
-	width: 90vw;
-	min-height: 50vw;
+
+
+
+.block_of_words{
+	column-count: 4;
+	column-gap: 5vw;
 }
 
-.close-btn{
-	background-color: #34B0AC;
-	border-radius: 0.5vw;
-	padding-top: 0.5vw;
-	padding-bottom: 0.5vw;
-	padding-left: 1vw;
-	padding-right: 1vw;
-	position: relative;
-	left: 200;
-	bottom: 0;
-}
