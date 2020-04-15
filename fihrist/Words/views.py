@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def words(request):
+	return render(request, 'fihrist01/words.html')
