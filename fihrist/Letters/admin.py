@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import letters_uz
 
-# Register your models here.
+
+admin.site.register(letters_uz)

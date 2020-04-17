@@ -33,69 +33,43 @@
 
 
 <!-- First 20 letter -->
+
 	<div class="letters-box">
-		<div class="letter">
-			<p class="letter-text">A</p>
-		</div><div class="letter">
-			<p class="letter-text">A</p>
-		</div><div class="letter">
-			<p class="letter-text">A</p>
-		</div><div class="letter">
-			<p class="letter-text">A</p>
-		</div><div class="letter">
-			<p class="letter-text">A</p>
-		</div><div class="letter">
-			<p class="letter-text">A</p>
-		</div><div class="letter">
-			<p class="letter-text">A</p>
-		</div><div class="letter">
-			<p class="letter-text">A</p>
-		</div><div class="letter">
-			<p class="letter-text">A</p>
-		</div><div class="letter">
-			<p class="letter-text">A</p>
-		</div><div class="letter">
-			<p class="letter-text">A</p>
-		</div><div class="letter">
-			<p class="letter-text">A</p>
-		</div><div class="letter">
-			<p class="letter-text">A</p>
-		</div><div class="letter">
-			<p class="letter-text">A</p>
-		</div><div class="letter">
-			<p class="letter-text">A</p>
-		</div>
+		{% for one_letter in All_letters_info %}
+
+			{% if one_letter.letter_id < 21 %}
+				<a href="#">
+				<div class="letter">
+					<p class="letter-text">{{one_letter.letter}}</p>
+				</div>
+				</a>
+			{% endif %}
+
+		{% endfor %}
+
 	</div>
+
+
+
 <!-- Letters after 20 -->
+
+
+
 	<div class="letters-box">
-		<div class="letter">
-			<p class="letter-text">A</p>
-		</div><div class="letter">
-			<p class="letter-text">A</p>
-		</div><div class="letter">
-			<p class="letter-text">A</p>
-		</div><div class="letter">
-			<p class="letter-text">A</p>
-		</div><div class="letter">
-			<p class="letter-text">A</p>
-		</div><div class="letter">
-			<p class="letter-text">A</p>
-		</div><div class="letter">
-			<p class="letter-text">A</p>
-		</div><div class="letter">
-			<p class="letter-text">A</p>
-		</div><div class="letter">
-			<p class="letter-text">A</p>
-		</div><div class="letter">
-			<p class="letter-text">A</p>
-		</div><div class="letter">
-			<p class="letter-text">A</p>
-		</div><div class="letter">
-			<p class="letter-text">A</p>
-		</div><div class="letter">
-			<p class="letter-text">A</p>
-		</div>
+		{% for one_letter in All_letters_info %}
+
+			{% if one_letter.letter_id > 20 %}
+				<a href="#">
+				<div class="letter">
+					<p class="letter-text">{{one_letter.letter}}</p>
+				</div>
+				</a>
+			{% endif %}
+
+	{% endfor %}
+
 	</div>
+
 
 
 
