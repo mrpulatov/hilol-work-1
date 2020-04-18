@@ -32,12 +32,13 @@
 
 <div class="letters-box">
 	<div class="block_of_words">
-		
-			<li>sjfksj</li>
-			<li>dsdsds</li>
-			<li>smkdfmskmd</li>
+		{%for one_word in All_words_info%}
 
 
+			<li>{% one_word.word%}</li>
+			
+
+		{%endfor%}
 
 	</div>
 </div>

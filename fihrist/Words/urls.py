@@ -2,6 +2,6 @@ from django.urls import path
 from . import views 
 
 urlpatterns = [
-    path('', views.words), #words
+    path('<int:letter_id>/', views.words, name = 'word_ask'), #words
 
 ]

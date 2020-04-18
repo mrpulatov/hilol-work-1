@@ -38,7 +38,7 @@
 		{% for one_letter in All_letters_info %}
 
 			{% if one_letter.letter_id < 21 %}
-				<a href="#">
+				<a href="{% url word_ask letter_id=one_letter.letter_id %}">
 				<div class="letter">
 					<p class="letter-text">{{one_letter.letter}}</p>
 				</div>
@@ -59,7 +59,7 @@
 		{% for one_letter in All_letters_info %}
 
 			{% if one_letter.letter_id > 20 %}
-				<a href="#">
+				<a href="{}">
 				<div class="letter">
 					<p class="letter-text">{{one_letter.letter}}</p>
 				</div>
