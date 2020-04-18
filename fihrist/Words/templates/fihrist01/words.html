@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>tanzil</title>
+	
 	<link href="https://fonts.googleapis.com/css?family=Cormorant:600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="http://xozmag24.uz/tormoz/style.css">
 	<script src="https://kit.fontawesome.com/cab2a65650.js" crossorigin="anonymous"></script>
@@ -32,11 +33,11 @@
 
 <div class="letters-box">
 	<div class="block_of_words">
-		{%for one_word in All_words_info%}
+		{% for one_word in All_words_info %}
 
-
-			<li>{% one_word.word%}</li>
-			
+			<a href="{% url 'place-ask' word_id=one_word.word_id %}" style="color:green;">
+			<li>{{ one_word.word_name }} </li>
+			</a>
 
 		{%endfor%}
 

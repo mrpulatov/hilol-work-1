@@ -2,6 +2,19 @@ body{
 	margin:0px;
 	padding: 0px;
 }
+
+@font-face {
+	font-family: 'Quranfont';
+	src: url('me_quran.ttf'), format('truetype'); 
+
+}
+
+@font-face {
+	font-family: 'Quranarabfont';
+	src: url('islamic_font.ttf'), format('truetype'); 
+
+}
+
 .body{
 
 	position: relative;
@@ -17,6 +30,9 @@ body{
 	z-index: 100;
 	left: 0;
 	top:0;
+}
+.arabian_view{
+	font-family: 'Quranfont', bold;
 }
 
 .red{

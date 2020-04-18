@@ -2,6 +2,6 @@ from django.urls import path
 from . import views 
 
 urlpatterns = [
-    path('', views.places), #places
+    path('<int:word_id>/', views.places, name = 'place-ask'), #words
 
 ]
