@@ -36,15 +36,27 @@
 
 <div class="word_place_case">
 
+<div class="word_place_case">
 
-
-	<p class="sura_name">Фотиҳа</p>
-	<p class="number">6</p>
-	<p class="arabian_view" style="font-family: Quranfont, ">ﻏﱔﻴﱦﺮﲌ ﭐﻟﱀﻤﱧﻐﱦﻀﱻﻮﺏﲌ ﻋﱺﻠﱁﻴﱦﻬﲌﻢﱦ ﻭﱺﵖﱔﵐ ﭐﻟﻀﲄﺂﻟﱊﲘﻴﻦﱺﳁﳉﳀ</p>
-	<p class="defenition">Ўзинг неъмат берганларнинг йўлига. Ғазабга қолганларникига ҳам эмас, адашганларникига ҳам эмас.</p>
-ﭐﻫﱹﺪﲘﻧﱧﺎ ﭐﻟﺼﲃﲔﺮﱺ﮴ﻁﱔ ﭐﻟﱀﻤﱨﺴﱹﺘﱧﻘﲘﻴﻢﱧﳁﳇﳀ
+{% for one_place in All_places_info %}
+	<b>	
+		<i>
+			<a class="sura_name">{{ one_place.sura_name }}</a>
+			<a class="ayat_number">{{ one_place.ayat_number }}</a>
+		</i>
+	</b>
+	<br>
+	<a class="ayat_text_uz">{{ one_place.ayat_translation_uz }}</a>
+	<br>
 <center><hr></center>
 
+{% endfor %}
+ 
+
+
+
+
+</div>
 
 </div>
 
@@ -52,3 +64,7 @@
 </div>
 </body>
 </html>	
+
+
+
+
