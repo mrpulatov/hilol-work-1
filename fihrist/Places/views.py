@@ -12,7 +12,7 @@ def get_word(word_id):
 
 def get_places(some_word):
     with connection.cursor() as cursor:
-        ask = "SELECT suras.sura_name_uz, ayats.ayat_number, ayats.ayat_translation_uz FROM ayats, suras WHERE (ayat_translation_uz ~* '"
+        ask = "SELECT suras.sura_name_uz, ayats.ayat_number, ayats.ayat_translation_uz FROM ayats, suras WHERE (ayat_translation_uz ~* ' "
         ask = ask + str(some_word)
         ask = ask + "' ) and (ayats.sura_id=suras.id) ORDER BY suras.id, ayats.ayat_number LIMIT 15 OFFSET 0"
         cursor.execute(ask)

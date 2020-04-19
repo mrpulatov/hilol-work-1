@@ -16,6 +16,13 @@ for letter in Letters:
 
 context = {"All_letters_info": All_letters}
 
+
+
+
+
+
+
 def index(request):
+
 	return render(request, 'fihrist01/index.html', context)
 
