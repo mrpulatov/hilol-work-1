@@ -1,0 +1,99 @@
+<html> 
+<!--   -->
+<head>
+	<meta charset="UTF-8">
+	<title>tanzil</title>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+	
+	<link href="https://fonts.googleapis.com/css?family=Cormorant:600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="http://xozmag24.uz/tormoz/style.css">
+	<script src="https://kit.fontawesome.com/cab2a65650.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div class="body">
+	<div class="pre-navbar">
+		<div class="logo-case">
+			<img src="http://xozmag24.uz/tormoz/logo.png" alt="logo">
+		</div>
+		<div class="logo-text">
+			<p class="text">ҚУРЪОНИ КАРИМДА КЕЛГАН СЎЗЛАР</p>
+		</div>
+	</div>
+
+
+
+
+		<center>
+		<form action="{% url 'place-ask-buy-word' %}" method="get">
+			{% csrf_token %}
+			<div class="input-group col-xs-4">
+			
+				<input type="text" class="form-control input-lg" placeholder="Search" name="some_word">
+			
+				<div class="input-group-btn">
+					<button class="btn btn-lg" type="submit" name="send">
+						<i class="glyphicon glyphicon-search"></i>
+					</button>
+				</div>
+			</div>
+		</form>
+		</center>
+
+
+
+
+
+
+
+
+
+
+
+<div class="word">
+	
+</div>
+
+<div class="word_place_case">
+
+<div class="word_place_case">
+
+{% for one_place in All_places_info %}
+	<b>	
+		<i>
+			<p class="sura_name">{{ one_place.sura_name }}</p>
+			<p class="ayat_number">{{ one_place.ayat_number }}</p>
+		</i>
+	</b>
+	<br>
+	<p class="ayat_text_uz">{{ one_place.ayat_translation_uz }}</p>
+	<br>
+<center><hr></center>
+
+{% endfor %}
+ 
+
+
+
+
+</div>
+
+</div>
+
+
+</div>
+</body>
+</html>	
+
+
+
+
