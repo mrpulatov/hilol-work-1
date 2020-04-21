@@ -18,6 +18,16 @@
 	<script src="https://kit.fontawesome.com/cab2a65650.js" crossorigin="anonymous"></script>
 
 </head>
+
+<style type="text/css">
+	.table-striped>tbody>tr:nth-child(odd)>td, 
+	.table-striped>tbody>tr:nth-child(odd)>th {
+   background-color:  #f2f2f2; 
+ }
+</style>
+
+
+
 <body>
 
 <div class="body">
@@ -58,39 +68,53 @@
 
 
 
-
-<div class="word">
+<div class="word_place_case container-fluid">
 	
+
+
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<p>
+				<h3>
+	 			{{word.word}} - {{word.count}} та топилди  
+				<h3>
+			</p>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+
+
+
+
+
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class= "col-md-10">
+			<table class="table table-striped">
+    
+    		<tbody>
+    			{% for one_place in All_places_info %}
+					<tr>
+						<td>
+							<b>{{ one_place.sura_name }}, {{ one_place.ayat_number }}-оят. &nbsp &nbsp</b>
+							
+							{{ one_place.ayat_translation_uz }}
+						</td>
+					</tr>
+				{% endfor %}
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-1"></div>	
+	</div>
 </div>
 
-<div class="word_place_case">
-
-<div class="word_place_case">
-
-{% for one_place in All_places_info %}
-	<b>	
-		<i>
-			<p class="sura_name">{{ one_place.sura_name }}</p>
-			<p class="ayat_number">{{ one_place.ayat_number }}</p>
-		</i>
-	</b>
-	<br>
-	<p class="ayat_text_uz">{{ one_place.ayat_translation_uz }}</p>
-	<br>
-<center><hr></center>
-
-{% endfor %}
- 
-
-
-
-
-</div>
 
 </div>
 
 
-</div>
+
 </body>
 </html>	
 
