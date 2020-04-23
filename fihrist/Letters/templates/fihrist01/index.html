@@ -31,7 +31,7 @@
 		<div class="logo-text">
 			<p class="text">ҚУРЪОНИ КАРИМДА КЕЛГАН СЎЗЛАР</p>
 		</div>
-	</div>
+	
 
 
 <div class="container-fluid">
@@ -43,15 +43,16 @@
 			{% csrf_token %}
         <div class="inner-form">
           <div class="input-field first-wrap">
-            <div class="svg-wrapper">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
-              </svg>
-            </div>
             <input id="search" type="text" placeholder="Қидириш..." name="some_word"/>
           </div>
           <div class="input-field second-wrap">
-            <button class="btn-search" type="submit" name="send">ИЗЛАШ</button>
+          	<div class="svg-wrapper">
+          	<button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" >
+                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+              </svg>
+            </button>
+            </div>
           </div>
         </div>
       </form>
@@ -60,7 +61,7 @@
 <div class="col-md-2 col-sm-1"></div>
 </div>
 </div>
-
+</div>
 
 
 
@@ -72,41 +73,25 @@
 
 <!-- First 20 letter -->
 
-	<div class="letters-box">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-1 col-sm-1"></div>
+	<div class="col-md-10 col-sm-10">
+		<center>
 		{% for one_letter in All_letters_info %}
 
-			{% if one_letter.letter_id < 21 %}
 				<a href="{% url 'word-ask' letter_id=one_letter.letter_id %}">
-				<div class="letter">
-					<p class="letter-text">{{one_letter.letter}}</p>
-				</div>
+					<button type="button" class="btn letter">{{one_letter.letter}} </button>
 				</a>
-			{% endif %}
 
 		{% endfor %}
-
+</center>
 	</div>
+<div class="col-md-1 col-sm-1"></div>
+</div>
+</div>
 
 
-
-<!-- Letters after 20 -->
-
-
-
-	<div class="letters-box">
-		{% for one_letter in All_letters_info %}
-
-			{% if one_letter.letter_id > 20 %}
-				<a href="{% url 'word-ask' letter_id=one_letter.letter_id %}">
-				<div class="letter">
-					<p class="letter-text">{{one_letter.letter}}</p>
-				</div>
-				</a>
-			{% endif %}
-
-	{% endfor %}
-
-	</div>
 
 
 

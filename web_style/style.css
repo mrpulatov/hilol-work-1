@@ -12,13 +12,35 @@ body{
     border: #d9d9d9 solid 1px;
     background-color:white;
 }
+a{
+    text-decoration: none;
+}
+
+
+.letter{
+    width:40px;
+    height:40px;
+    margin-bottom:15px;
+    margin-left:15px;
+    font-size:16px;
+    font-weight: bold;
+    color:#666666;
+    border: #d9d9d9 solid 1px;
+    background-color:white;
+}
 
 .word:hover{
     background-color:#f2f2f2;
 }
 
+.letter:hover{
+    background-color:#f2f2f2;
+}
+
 .pre-navbar{
     padding-bottom:4px;
+    background:url('http://xozmag24.uz/tormoz/words.png');
+    margin-bottom:40px;
 }
 
 .body{
@@ -27,51 +49,20 @@ body{
 
 .logo-case , .text{
   text-align: center;
-  background-color:  #34B0AC;
   margin:0px;
   padding: 0px;
 }
 
 .logo-case img{
   margin:10px;
-  height: 20vw;
-  width: 20vw;
+  height: 15vw;
+  width: 15vw;
 }
 
 .text{
     font-family: 'Cormorant', serif;
     font-size: 22px;
     color: white;
-}
-
-.letters-box{
-  margin-right: 10vw;
-  margin-left: 10vw;
-  margin-top: 2vw;
-  display: flex;
-  justify-content: center;
-}
-
-.letter{
-  float: left;
-  justify-content: center;
-  align-items: center;
-  height: 2vw;
-  width: 2vw;
-  background-color: #F6F6FF;
-  margin-right: 0.6vw;
-  margin-left: 0.6vw;
-  margin-top: 1.5vw;
-  border-radius: 10%;
-  border: 1px solid #9e9e9e;
-}
-
-.letter-text{
-  font-family: 'Cormorant', serif;
-    font-size: 22px;
-    margin:0px;
-    text-align: center;
-    color: #424242;
 }
 
 .block_of_words{
@@ -85,7 +76,6 @@ body{
   -ms-flex-pack: center;
       justify-content: center;
   font-family: 'Poppins', sans-serif;
-  background: url("../images/Searchs_130.png");
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -104,9 +94,10 @@ body{
   -ms-flex-align: center;
       align-items: center;
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
-  border-radius: 34px;
+  border:white solid 4px;
   overflow: hidden;
-  margin-bottom: 30px;
+  margin-top:20px;
+  margin-bottom: 35px;
 }
 
 .s130 form .inner-form .input-field {
@@ -120,13 +111,14 @@ body{
   display: block;
   width: 100%;
   padding: 10px 0;
-  font-size: 14px;
-  color: #000;
+  font-size: 18px;
+  color: black;
+  margin-left:20px;
 }
 
 .s130 form .inner-form .input-field input.placeholder {
-  color: #222;
-  font-size: 14px;
+  color: black;
+  font-size: 18px;
 }
 
 .s130 form .inner-form .input-field input:hover, .s130 form .inner-form .input-field input:focus {
@@ -141,7 +133,7 @@ body{
   display: flex;
   -ms-flex-align: center;
       align-items: center;
-  background: #d9f1e3;
+  background: white;
 }
 
 .s130 form .inner-form .input-field.first-wrap input {
@@ -149,7 +141,7 @@ body{
       flex-grow: 1;
 }
 
-.s130 form .inner-form .input-field.first-wrap .svg-wrapper {
+.s130 form .inner-form .input-field.second-wrap button{
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -158,22 +150,22 @@ body{
       align-items: center;
 }
 
-.s130 form .inner-form .input-field.first-wrap svg {
+.s130 form .inner-form .input-field.second-wrap button svg{
     padding-left:5px;
   width: 36px;
   height: 36px;
   fill: #222;
 }
-
-.s130 form .inner-form .input-field.second-wrap {
-  min-width: 150px;
+.s130 form .inner-form .input-field.second-wrap{
+    min-width:45px;
+    min-height:45px;
 }
 
-.s130 form .inner-form .input-field.second-wrap .btn-search {
+
+.s130 form .inner-form .input-field.second-wrap button {
   height: 100%;
   width: 100%;
   white-space: nowrap;
-  font-size: 16px;
   color: #fff;
   border: 0;
   cursor: pointer;
@@ -182,23 +174,29 @@ body{
   background: #34B0AC;
   transition: all .2s ease-out, color .2s ease-out;
   font-weight: bold;
+  border-radius:5%;
 }
 
-.s130 form .inner-form .input-field.second-wrap .btn-search:hover {
+.s130 form .inner-form .input-field.second-wrap button:hover {
   background: #2f9995;
 }
 
-.s130 form .inner-form .input-field.second-wrap .btn-search:focus {
+.s130 form .inner-form .input-field.second-wrap button:focus {
   outline: 0;
   box-shadow: none;
 }
 
 
 
-@media screen and (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   .s130 form .inner-form .input-field {
     height: 35px;
   }
+  .s130 form .inner-form .input-field.second-wrap{
+    min-width:35px;
+    min-height:35px;
+}
+  
   .block_of_words{
   column-count: 4;
   column-gap: 5vw;}
@@ -207,8 +205,8 @@ body{
   }
 }
 
-@media screen and (max-width: 767px) {
-  .s130 form .inner-form .input-field.first-wrap .svg-wrapper {
+@media only screen and (max-width: 767px) {
+  .s130 form .inner-form .input-field.first-wrap button {
     min-width: 30px;
     display: -ms-flexbox;
     display: flex;
@@ -217,16 +215,16 @@ body{
     -ms-flex-align: center;
         align-items: center;
   }
-  .s130 form .inner-form .input-field.first-wrap svg {
+  
+  .s130 form .inner-form .input-field.second-wrap{
+    min-width:30px;
+    min-height:30px;
+}
+  .s130 form .inner-form .input-field.first-wrap button {
     width: 28px;
     height: 28px;
     fill: #222;
   }
-  .s130 form .inner-form .input-field.second-wrap .btn-search {
-    font-size: 13px;
-    font-weight:bold;
-  }
-  
   .block_of_words{
   column-count: 3;
   column-gap: 5vw;
@@ -234,7 +232,7 @@ body{
 }
 
 
-@media screen and (max-width: 485px) {
+@media only screen and (max-width: 485px) {
   .block_of_words{
   column-count: 2;
   column-gap: 5vw;}
