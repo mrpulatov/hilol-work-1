@@ -2,95 +2,153 @@
 <!--   -->
 <head>
 	<meta charset="UTF-8">
-	<title>tanzil</title>
+	<title>Fihrist.uz</title>
 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="http://xozmag24.uz/tormoz/main.js"></script>
 
-
-
-
-	
-	<link href="https://fonts.googleapis.com/css?family=Cormorant:600&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="http://xozmag24.uz/tormoz/style.css">
-	<script src="https://kit.fontawesome.com/cab2a65650.js" crossorigin="anonymous"></script>
+	<link href="http://xozmag24.uz/tormoz/style.css" rel="stylesheet" >
 
 </head>
+
+
+
+
 <body>
 
 <div class="body">
 	<div class="pre-navbar">
 		<div class="logo-case">
-			<img src="http://xozmag24.uz/tormoz/logo.png" alt="logo">
+			<a href="{% url 'main_page' %}">
+			<img src="http://xozmag24.uz/tormoz/logo.png" alt="logo" >
+			</a>
 		</div>
 		<div class="logo-text">
 			<p class="text">ҚУРЪОНИ КАРИМДА КЕЛГАН СЎЗЛАР</p>
 		</div>
+	
+
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-2 col-sm-1"></div>
+<div class="col-md-8 col-sm-10">
+	<div class="s130">
+		<form action="{% url 'place-ask-buy-word' %}" method="get">
+			{% csrf_token %}
+        <div class="inner-form">
+          <div class="input-field first-wrap">
+            <input id="search" type="text" placeholder="Қидириш..." name="some_word"/>
+          </div>
+          <div class="input-field second-wrap">
+          	<div class="svg-wrapper">
+          	<button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" >
+                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+              </svg>
+            </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+</div>
+<div class="col-md-2 col-sm-1"></div>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="word_place_case container-fluid">
+	
+
+
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<p>
+				<h3>
+	 			«{{word.word}}» сўзи {{word.count}} жойда топилди 
+				<h3>
+			</p>
+		</div>
+		<div class="col-md-1"></div>
 	</div>
 
 
 
 
-		<center>
-		<form action="{% url 'place-ask-buy-word' %}" method="get">
-			{% csrf_token %}
-			<div class="input-group col-xs-4">
-			
-				<input type="text" class="form-control input-lg" placeholder="Search" name="some_word">
-			
-				<div class="input-group-btn">
-					<button class="btn btn-lg" type="submit" name="send">
-						<i class="glyphicon glyphicon-search"></i>
-					</button>
+
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class= "col-md-10">
+			<table class="table table-striped" >
+    
+    		<tbody>
+    			{% for one_place in All_places_info %}
+					<tr>
+						<td style="white-space:nowrap">
+							{{ one_place.sura_name }} сураси, {{ one_place.ayat_number }}-оят:
+						</td>
+						<td>
+							<b>{{ one_place.ayat_translation_uz }}</b>
+						</td>
+					</tr>
+				{% endfor %}
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-1"></div>	
+	</div>
+</div>
+
+
+</div>
+
+
+
+
+
+<footer class="footer">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-1 col-sm-0"></div>
+			<div class="col-md-10 col-sm-12">
+				<div class="first-wrap block_of_words">
+					<b>
+					<a href="https://namoz.islom.uz/">www.namoz.islom.uz</a>
+					<a href="https://zikr.islom.uz/">www.zikr.islom.uz</a>
+					<a href="https://hilolnashr.uz/">www.hilolnashr.uz</a>
+					<a href="https://kitoblardunyosi.uz/">www.kitoblardunyosi.uz</a>
+					<a href="https://islom.uz/">www.islom.uz</a>
+					</b>
 				</div>
 			</div>
-		</form>
-		</center>
+			<div class="col-md-1 col-sm-0"></div>
+		</div>
+	</div>
 
 
+<div class="footer-bottom second-wrap">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 footer-copyright">
+				<p>© Hilol nashr 2020</p>
+				<p>Барча ҳуқуқлар ҳимояланган. Сайтдан маълумот олинганда манба кўрсатилиши шарт.</p>
+			</div>
+		</div>
+	</div>
+</div>  
+</footer> 
 
 
-
-
-
-
-
-
-
-<div class="word">
-	
-</div>
-
-<div class="word_place_case">
-
-<div class="word_place_case">
-
-{% for one_place in All_places_info %}
-	<b>	
-		<i>
-			<p class="sura_name">{{ one_place.sura_name }}</p>
-			<p class="ayat_number">{{ one_place.ayat_number }}</p>
-		</i>
-	</b>
-	<br>
-	<p class="ayat_text_uz">{{ one_place.ayat_translation_uz }}</p>
-	<br>
-<center><hr></center>
-
-{% endfor %}
- 
-
-
-
-
-</div>
-
-</div>
-
-
-</div>
 </body>
 </html>	
 

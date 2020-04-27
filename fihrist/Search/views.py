@@ -16,10 +16,24 @@ def get_places(some_word):
     return row
 
 
+def get_count(some_word):
+    with connection.cursor() as cursor:
+        ask = "SELECT COUNT(1) FROM ayats WHERE (ayat_translation_uz ~* ' "
+        ask = ask + str(some_word)
+        ask = ask + "')"
+        cursor.execute(ask)
+        number = cursor.fetchall()
+    return number[0]
+
+
 
 def places_buy_word(request):
 	All_places_contain_word=[]
 	some_word = request.GET.get('some_word')
+	word_info={
+	'word': some_word,
+	'count': get_count(some_word)[0]
+	}
 	get_places_info = get_places(some_word)
 	for place in get_places_info:
 		place_info={
@@ -28,7 +42,7 @@ def places_buy_word(request):
 		'ayat_translation_uz': place[2],
 		}
 		All_places_contain_word.append(place_info)
-	context = {'All_places_info': All_places_contain_word}
+	context = {'All_places_info': All_places_contain_word, 'word':word_info}
 
 
 
